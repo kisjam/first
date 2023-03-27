@@ -1,0 +1,18 @@
+@use "../../global/" as *;
+
+.u-bold {
+  font-weight: 700;
+}
+
+.u-marker {
+  display: inline;
+  text-shadow: rem(3) 0 0 #fff;
+  /* ベンダープレフィックスはつけておこう↓のやつね、完成までにやること */
+  // transparentとは全体の透明範囲を意味します。
+  background: linear-gradient(transparent 60%, #f940bc 0%);
+}
+
+.u-poppins {
+  font-family: Poppins;
+  font-weight: 800;
+}

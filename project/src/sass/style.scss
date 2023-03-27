@@ -1,0 +1,9 @@
+// 空データだとエラーになるので注意
+// @useが一番最初にこないとエラーになるので注意
+
+
+@use "global";
+@use "foundation";
+@use "object";
+@use "layout";
+// @use "javascript";

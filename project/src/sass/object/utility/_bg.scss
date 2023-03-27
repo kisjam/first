@@ -1,0 +1,31 @@
+@use "../../global/" as *;
+
+.u-bg--border {
+  background-image: repeating-linear-gradient(45deg,#f5f5f5 0,#f5f5f5 rem(4),#fff rem(4),#fff rem(8));
+
+  @include pc {
+    background-image: repeating-linear-gradient(45deg,#f5f5f5 0,#f5f5f5 rem(15),#fff rem(15),#fff rem(30));
+  }
+}
+
+// transparentにすることによりその部分が透過される
+// 透過しないと2つ目の円が映らないため必要となる
+// 透過した部分に色を付けるためにbackground-colorが必要となる
+// background-positionによってぴったり重なった2つ目の円をズラしている
+// 1つ目は「0 0」でそのままに、2つ目を「rem(4 rem(4」で位置調整をしている
+// rem(4)というのは、background-sizeの半分の値
+// https://cotodama.co/css_dotted/
+.u-bg--dot {
+  background-size: rem(8) rem(8);
+  background-color: #fff;
+  background-image:
+    radial-gradient(#f5f5f5 20%, transparent 20%),
+    radial-gradient(#f5f5f5 20%, transparent 20%);
+  background-position: 0 0, rem(4) rem(4);
+  background-repeat: repeat;
+
+  @include pc {
+    background-size: rem(33) rem(33);
+    background-position: 0 0, rem(16.5) rem(16.5);
+  }
+}

@@ -1,0 +1,67 @@
+@use "../../global/" as *;
+
+.c-btn {
+  position: relative;
+  width: rem(134);
+  height: rem(41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(15);
+  font-weight: 900;
+  text-align: center;
+  background-color: #bdfa3e;
+  border-radius: rem(20.5);
+  box-shadow: 0 rem(10) rem(10) 0 rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height:300%;
+    width: 15%;
+    background-color: #fff;
+    transform: translate(-600%, 0%) rotate(-45deg);
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(600%, 0%) rotate(-45deg);
+    }
+  }
+
+
+  // お手本のボタンが光るエフェクト
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: 5rem;
+  //   height: 300%;
+  //   top: 50%;
+  //   position: absolute;
+  //   background-color: #fff;
+  //   transform: translate(-500%, -50%) rotate(-45deg);
+  //   transition: transform 0.5s ease;
+  // }
+
+  // &:hover {
+  //   &::before {
+  //     transform: translate(500%, -50%) rotate(-45deg);
+  //   }
+  // }
+  // お手本のボタンが光るエフェクト
+
+
+
+  @include pc {
+    width: rem(284);
+    height: rem(110);
+    font-size: rem(38);
+    border-radius: rem(55);
+  }
+}

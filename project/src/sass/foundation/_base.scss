@@ -1,0 +1,52 @@
+// 文字コードの指定
+@charset "UTF-8";
+// 変数フォルダを参照している。
+// *マークをつけることで変数を呼び出すときの文字を省略している。
+@use "../global" as *;
+
+
+// 横幅:～767px以下で可変
+@media (max-width: 768px) {
+  html {
+    font-size: vw-sp(16);
+  }
+}
+
+// 横幅:768px～1366px内で可変
+@media (min-width: 768px) {
+  html {
+    font-size: vw-pc(16);
+  }
+}
+
+// 横幅:1365px以上は常に16px
+@media (min-width: 1366px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+body {
+  font-family: 'Noto Sans JP';
+  line-height: 1.75;
+  color: #454545;
+}
+
+a {
+  color: #454545;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}

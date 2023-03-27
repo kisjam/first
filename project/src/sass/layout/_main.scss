@@ -1,0 +1,583 @@
+@use "../global" as *;
+
+
+// 興味
+.l-interest {
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    padding-top: 3.7rem;
+    padding-bottom: 2.9rem;
+
+    @include pc {
+      padding-top: 3.6rem;
+      padding-bottom: 3.6rem;
+    }
+
+    &__question {
+      position: relative;
+      z-index: 2;
+      font-size: rem(14);
+      font-weight: 900;
+      text-align: center;
+
+      @include sp {
+        margin-right: 4rem;
+      }
+
+      @include pc {
+        text-align: start;
+        font-size: rem(31);
+      }
+    }
+
+    &__thinking {
+      position: absolute;
+      z-index: 1;
+
+      @include sp {
+        top: -0.3rem;
+        right: -2.3rem;
+        width: rem(192);
+      }
+
+      @include pc {
+        bottom: 0;
+        right: -15rem;
+        width: rem(630);
+      }
+    }
+
+    &__wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: rem(15);
+      margin-top: 3.6rem;
+
+      @include pc {
+        align-items: start;
+        row-gap: rem(25);
+        margin-top: 2.4rem;
+      }
+
+      &__anxiety {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(289);
+        height: rem(48);
+        font-size: rem(14);
+        font-weight: 900;
+        border-radius: rem(24);
+        border: solid rem(2) #707070;
+        background-color: #fff;
+
+        @include pc {
+          width: rem(769);
+          height: rem(108);
+          font-size: rem(30);
+          border-radius: rem(50);
+          border: solid rem(7) #707070;
+        }
+      }
+    }
+
+    &__answer {
+      position: relative;
+      z-index: 2;
+      margin-top: 2.4rem;
+      text-align: center;
+
+      @include pc {
+        margin-top: 2rem;
+        text-align: start;
+      }
+
+      span {
+        font-size: rem(15);
+        font-weight: 900;
+
+        @include sp {
+          letter-spacing: -0.04rem;
+        }
+
+        @include pc {
+          font-size: rem(37);
+        }
+      }
+    }
+  }
+}
+
+// ポイント
+.l-points {
+  background-color: #3fbcfa;
+
+  &__container {
+    padding-top: rem(25);
+    padding-bottom: rem(48);
+
+    @include pc {
+      padding-top: rem(60);
+      padding-bottom: rem(94);
+    }
+
+    .c-title {
+
+      @include pc {
+        font-size: 0;
+
+        &::before {
+          content: 'キラメキホワイトニングの3つのポイント';
+          font-size: rem(40);
+        }
+      }
+    }
+
+    &__wrap {
+      max-width: rem(850);
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(38);
+      margin: 1.78rem auto 0;
+      color: #fff;
+
+      @include pc {
+        row-gap: rem(60);
+        margin-top: rem(60);
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.3rem;
+
+        @include pc {
+          flex-direction: row;
+          align-items: stretch;
+          column-gap: rem(26);
+
+        }
+
+        &__number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: rem(40);
+          line-height: 1;
+
+          @include sp {
+            width: rem(81);
+            border-bottom: rem(1) solid #fff;
+          }
+
+          @include pc {
+            justify-content: stretch;
+            font-size: rem(70);
+            min-width: rem(132);
+            border-right: rem(5) solid #fff;
+          }
+        }
+
+        &__text {
+
+          @include pc {
+            padding-top: rem(16);
+          }
+
+          &__heading {
+            font-size: rem(15);
+            font-weight: 900;
+            text-align: center;
+
+            @include pc {
+              font-size: rem(30);
+              text-align: start;
+            }
+          }
+
+          &__description {
+            font-size: rem(14);
+            margin-top: 0.5rem;
+            line-height: lh(14, 16);
+
+            @include pc {
+              font-size: rem(18);
+              margin-top: rem(20);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Q&A
+.l-qa {
+
+  &__container {
+    padding-top: rem(25);
+    padding-bottom: rem(48);
+
+    @include pc {
+      padding-top: rem(60);
+      padding-bottom: rem(90);
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      margin-top: rem(15);
+      row-gap: rem(25);
+
+      @include pc {
+        margin-top: rem(60);
+        row-gap: rem(30);
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: rem(10) rem(17) rem(14);
+
+        @include pc {
+          flex-direction: row;
+          padding: rem(76) rem(67) rem(77) rem(34);
+        }
+
+        &__img {
+          width: rem(206);
+
+          @include pc {
+            width: rem(425);
+          }
+        }
+
+        &__text {
+          margin-top: rem(15);
+
+          @include pc {
+            margin-top: rem(0);
+            margin-left: rem(42);
+          }
+
+          &__question {
+            display: flex;
+            align-items: center;
+
+            &__badge {
+              min-width: rem(28);
+              font-size: rem(18);
+
+              @include pc {
+                min-width: rem(80);
+                font-size: rem(60);
+              }
+            }
+
+            &__heading {
+              font-size: rem(15);
+              font-weight: 900;
+
+              @include pc {
+                font-size: rem(30);
+              }
+            }
+          }
+
+          &__answer {
+            display: flex;
+            align-items: center;
+            color: #f940bc;
+            margin-top: rem(12);
+
+            @include pc {
+              margin-top: rem(30);
+            }
+
+            &__badge {
+              min-width: rem(28);
+              font-size: rem(18);
+
+              @include pc {
+                min-width: rem(80);
+                font-size: rem(60);
+              }
+            }
+
+            &__description {
+              font-size: rem(14);
+              line-height: lh(14, 16);
+
+              @include pc {
+                font-size: rem(18);
+                line-height: lh(18, 27);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-reason {
+
+  &__container {
+    padding-top: rem(25);
+    padding-bottom: rem(48);
+
+    @include pc {
+      padding-top: rem(60);
+      padding-bottom: rem(90);
+    }
+
+    &__content {
+      margin-top: rem(15);
+      padding: rem(29) rem(25) rem(25);
+      background-color: #fff;
+      border: solid rem(1) #707070;
+      border-radius: rem(5);
+      text-align: center;
+
+      @include pc {
+        margin-top: rem(60);
+        padding: rem(80) rem(48) rem(70);
+        border: solid rem(7) #707070;
+        border-radius: rem(15);
+      }
+
+      &__title {
+        display: inline-block;
+        font-size: rem(16);
+        font-weight: 900;
+        border-bottom: solid rem(1) #f940bc;
+
+        @include pc {
+          font-size: rem(30);
+          border-bottom: solid rem(10) #f940bc;
+        }
+      }
+
+      &__wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(25);
+        margin-top: rem(25);
+
+        @include pc {
+          margin-top: rem(89);
+          row-gap: rem(100);
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: rem(18);
+          text-align: start;
+
+          @include pc {
+            flex-direction: row;
+            column-gap: rem(30);
+
+            &:nth-child(even) {
+              flex-direction: row-reverse;
+            }
+          }
+
+          &__img {
+            max-width: rem(206);
+
+            @include pc {
+              max-width: rem(423);
+            }
+          }
+
+          &__text {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(11);
+            font-size: rem(14);
+            line-height: lh(14, 16);
+
+            @include pc {
+              row-gap: rem(32);
+              font-size: rem(18);
+              line-height: lh(18, 27);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 質問（アコーディオンメニュー）
+.l-accordion {
+
+  &__container {
+    padding-top: rem(25);
+    padding-bottom: rem(48);
+
+    @include pc {
+      padding-top: rem(60);
+      padding-bottom: rem(90);
+    }
+
+    .c-title {
+      max-width: rem(179);
+
+      @include pc {
+        max-width: rem(456);
+      }
+    }
+
+    &__accordion {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(11);
+      margin-top: rem(15);
+
+      @include pc {
+        row-gap: rem(40);
+        margin-top: rem(60);
+      }
+
+      &__item {
+        font-size: rem(14);
+        line-height: lh(14, 16);
+        background-color: #fff;
+
+        @include pc {
+          font-size: rem(18);
+          line-height: lh(18, 27);
+        }
+
+        &__question {
+          position: relative;
+          display: flex;
+          padding: rem(9) rem(6) rem(9);
+          border-bottom: solid rem(1) #707070;
+
+          @include pc {
+            padding: rem(20) rem(36) rem(20);
+            border-bottom: solid rem(2) #707070;
+          }
+
+
+          &__badge {
+            min-width: rem(27);
+
+            @include pc {
+              min-width: rem(42);
+            }
+          }
+
+          &__text {}
+        }
+
+        &__answer {
+          display: flex;
+          padding: rem(9) rem(6) rem(10);
+
+          @include pc {
+            padding: rem(20) rem(36) rem(20);
+          }
+
+          &__badge {
+            min-width: rem(27);
+
+            @include pc {
+              min-width: rem(42);
+            }
+          }
+
+          &__text {}
+        }
+      }
+    }
+  }
+}
+
+
+// アコーディオンメニュー開閉バッジ
+.puls,
+.minus {
+  position: relative;
+}
+
+.plus::before {
+  content: "＋";
+  position: absolute;
+  top: rem(9);
+  right: rem(11);
+  font-size: rem(14);
+
+  @include pc {
+    top: rem(18);
+    right: rem(36);
+    font-size: rem(22);
+  }
+}
+
+.minus::before {
+  content: "ー";
+  position: absolute;
+  top: rem(9);
+  right: rem(11);
+  font-size: rem(14);
+
+  @include pc {
+    top: rem(18);
+    right: rem(36);
+    font-size: rem(22);
+  }
+}
+
+// .u-display--none {
+//   display: none;
+// }
+
+
+// フッター
+.l-footer {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(12);
+    padding-top: rem(43);
+    padding-bottom: rem(40);
+
+    @include pc {
+      flex-direction: row;
+      align-items: end;
+      justify-content: center;
+      column-gap: rem(200);
+      padding-top: rem(43);
+      padding-bottom: rem(40);
+    }
+
+    &__logo {
+      max-width: rem(188);
+
+      @include pc {
+        max-width: rem(381);
+      }
+    }
+
+    &__copyright {
+      font-size: rem(12);
+    }
+  }
+}

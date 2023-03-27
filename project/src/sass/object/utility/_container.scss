@@ -1,0 +1,8 @@
+@use "../../global/" as *;
+
+.u-container {
+  max-width: rem(1160);
+  margin: auto;
+  padding-left: rem(14);
+  padding-right: rem(14);
+}

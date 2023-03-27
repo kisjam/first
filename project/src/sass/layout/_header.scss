@@ -1,0 +1,82 @@
+// 変数フォルダを参照している。
+// *マークをつけることで変数を呼び出すときの文字を省略している。
+@use "../global" as *;
+
+.l-header {
+  background-image: url("../../../dist/images/header/main_sp.jpg");
+  background-position: center top;
+  background-size: cover;
+  height: rem(417);
+  @include pc {
+    height: rem(684);
+    background-image: url("../../../dist/images/header/main_pc.jpg");
+    background-position: left top;
+  }
+
+    &__container {
+      height: 100%;
+
+      @include pc {
+        max-width: 73rem;
+        margin: auto;
+      }
+
+      &__wrap{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 0.3rem;
+
+        @include pc {
+          padding-right: 0;
+        }
+
+      &__content {
+
+        @include pc {
+        }
+
+        h1 {
+          line-height: 0; // 見出しタグ特有の余白を消すため
+        }
+
+        &__catch span {
+          display: inline-block;
+          font-size: rem(19);
+          font-weight: 900;
+
+          @include pc {
+            font-size: rem(45);
+          }
+        }
+
+        > h1 span {
+          line-height: 1.5;
+
+          @include pc {
+            line-height: 1.9;
+          }
+        }
+
+        > p span {
+          line-height: 1.4;
+
+          @include pc {
+            line-height: 1.9;
+          }
+        }
+
+        &__logo {
+          width: rem(218);
+          margin: 2.2rem 0 2.4rem 0.42rem;
+
+          @include pc {
+            width: rem(450);
+            margin: 2.7rem 0 1.3rem 3.1rem;
+          }
+        }
+      }
+    }
+  }
+}
